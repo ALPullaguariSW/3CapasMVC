@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicación MVC - Carrito de Compras</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    />
+  </head>
+  <body>
+    <h1>Carrito de Compras</h1>
+
+    <form id="form">
+      <input type="text" id="nombreInput" placeholder="Nombre del artículo" />
+      <input type="number" id="precioInput" placeholder="Precio del artículo" />
+      <button type="submit">Agregar Artículo</button>
+    </form>
+    <div id="app">
+      <table id="tabla-articulos">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se mostrarán los artículos del carrito -->
+        </tbody>
+      </table>
+      <button id="eliminarTodoBtn">Eliminar Todo</button>
+      <p>Total: <span id="totalCompra"></span></p>
+    </div>
+    <!-- Cargar los scripts en el orden correcto -->
+    <script src="../backend/modelo.js" type="module"></script>
+    <script src="../backend/vista.js" type="module"></script>
+    <script src="../backend/controlador.js" type="module"></script>
+  </body>
+</html>
